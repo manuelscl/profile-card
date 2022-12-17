@@ -22,11 +22,19 @@
         body {
             background-color: hsl(185, 75%, 39%);
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
         .profile-card {
             max-width: 340px;
             display: flex;
             flex-direction: column;
             background: white;
+            border-radius: 12px;
+            overflow: hidden;
             text-align: center;
         }
         .profile-card-pattern {
@@ -36,39 +44,51 @@
             border-radius: 50%;
             border: 5px solid white;
         }
-        .profile-title {
+        .profile-name {
             font-size: 18px;
             color: hsl(229, 23%, 23%);
+            margin-bottom: 10px;
         }
-        .profile-title span {
+        .profile-name span {
             font-weight: 400;
             color: hsl(227, 10%, 46%);
+            margin-left: 8px;
         }
         .profile-city {
             font-size: 14px;
             color: hsl(227, 10%, 46%);
         }
         .profile-content {
-            padding: 20px;
-        }
-        .profile-cd {
             display: flex;
             flex-direction: column;
             gap: 30px;
+            padding: 20px 0;
+            position: relative;
+        }
+        .profile-img-cr {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -74px);
+        }
+        .profile-nc {
+            margin-top: 60px;
         }
         .profile-stats {
             display: flex;
             justify-content: space-between;
-            padding: 0 40px;
+            border-top: 1px solid hsl(0deg 4% 89%);
+            padding: 30px 40px 10px;
         }
         .profile-stats-info .count {
             font-weight: 18px;
             font-weight: 700;
-            margin-bottom: 10px;
             color: hsl(229, 23%, 23%);
+            letter-spacing: 0.3px;
+            margin-bottom: 10px;
         }
         .profile-stats-info p:nth-child(2) {
             font-size: 12px;
+            letter-spacing: 1.2px;
             color: hsl(227, 10%, 46%);
         }
     </style>
@@ -84,8 +104,8 @@
                         <img src="./images/image-victor.jpg" alt="profile picture">
                     </div>
 
-                    <div>
-                        <h1 class="profile-title">Victor Crest <span>26</span></h1>
+                    <div class="profile-nc">
+                        <h1 class="profile-name">Victor Crest <span>26</span></h1>
                         <p class="profile-city">London</p>
                     </div>
 
