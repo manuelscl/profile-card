@@ -7,32 +7,103 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Profile card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+        
+        body {
+            background-color: hsl(185, 75%, 39%);
+        }
+        .profile-card {
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            text-align: center;
+        }
+        .profile-card-pattern {
+            width: 100%;
+        }
+        .profile-content img {
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        .profile-title {
+            font-size: 18px;
+            color: hsl(229, 23%, 23%);
+        }
+        .profile-title span {
+            font-weight: 400;
+            color: hsl(227, 10%, 46%);
+        }
+        .profile-city {
+            font-size: 14px;
+            color: hsl(227, 10%, 46%);
+        }
+        .profile-content {
+            padding: 20px;
+        }
+        .profile-cd {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .profile-stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .profile-stats-info .count {
+            font-weight: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: hsl(229, 23%, 23%);
+        }
+        .profile-stats-info p:nth-child(2) {
+            font-size: 12px;
+            color: hsl(227, 10%, 46%);
+        }
+    </style>
 </head>
 <body>
 
     <main>
         <section class="container">
             <div class="profile-card">
-                <img src="./images/bg-pattern-card.svg" alt="">
+                <img class="profile-card-pattern" src="./images/bg-pattern-card.svg" alt="">
                 <div class="profile-content">
-                    <img src="./images/image-victor.jpg" alt="profile picture">
-                    <h1 class="profile-title">Victor Crest <span>26</span></h1>
-                    <p class="profile-city">London</p>
-                    <div class="profile-bottom">
-                        <div>
+                    <div class="profile-img-cr">
+                        <img src="./images/image-victor.jpg" alt="profile picture">
+                    </div>
+
+                    <div>
+                        <h1 class="profile-title">Victor Crest <span>26</span></h1>
+                        <p class="profile-city">London</p>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="profile-stats-info">
                             <p class="count">80K</p>
                             <p>Followers</p>
                         </div>
-                        <div>
+                        <div class="profile-stats-info">
                             <p class="count">803K</p>
                             <p>Likes</p>
-                        </div>
-                        <div>
+                         </div>
+                        <div class="profile-stats-info">
                             <p class="count">1.4K</p>
                             <p>Photos</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
